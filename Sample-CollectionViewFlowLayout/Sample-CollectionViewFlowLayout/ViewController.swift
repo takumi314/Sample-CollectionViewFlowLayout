@@ -13,9 +13,14 @@ let numberOfCell    = 10
 
 class ViewController: UIViewController {
 
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        collectionView.dataSource = self
+        collectionView.delegate = self
+
     }
 
 }
@@ -35,7 +40,8 @@ extension ViewController: UICollectionViewDataSource {
 
         let identifier = "cell"
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! CustomCollectionViewCell
+        cell.imageView.image = UIImage(named: "picker_cloud")
 
         return cell
     }
