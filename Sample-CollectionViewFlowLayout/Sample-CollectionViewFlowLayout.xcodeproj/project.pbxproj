@@ -13,6 +13,7 @@
 		E10B2AED21B6E91700EA1A2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10B2AEC21B6E91700EA1A2A /* Assets.xcassets */; };
 		E10B2AF021B6E91700EA1A2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10B2AEE21B6E91700EA1A2A /* LaunchScreen.storyboard */; };
 		E10B2AF821B6EDB400EA1A2A /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B2AF721B6EDB400EA1A2A /* CustomCollectionViewCell.swift */; };
+		E10B2AFA21B6F0CD00EA1A2A /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10B2AF921B6F0CD00EA1A2A /* CustomCollectionViewFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E10B2AEF21B6E91700EA1A2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E10B2AF121B6E91700EA1A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E10B2AF721B6EDB400EA1A2A /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		E10B2AF921B6F0CD00EA1A2A /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E10B2AEE21B6E91700EA1A2A /* LaunchScreen.storyboard */,
 				E10B2AF121B6E91700EA1A2A /* Info.plist */,
 				E10B2AF721B6EDB400EA1A2A /* CustomCollectionViewCell.swift */,
+				E10B2AF921B6F0CD00EA1A2A /* CustomCollectionViewFlowLayout.swift */,
 			);
 			path = "Sample-CollectionViewFlowLayout";
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				E10B2AE821B6E91200EA1A2A /* ViewController.swift in Sources */,
 				E10B2AF821B6EDB400EA1A2A /* CustomCollectionViewCell.swift in Sources */,
 				E10B2AE621B6E91200EA1A2A /* AppDelegate.swift in Sources */,
+				E10B2AFA21B6F0CD00EA1A2A /* CustomCollectionViewFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
