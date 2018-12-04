@@ -11,8 +11,9 @@ import UIKit
 final class CustomCollectionViewFlowLayout: UICollectionViewFlowLayout {
 
     struct Settings {
-        static let kMinimumInteritemSpacing: CGFloat    = 50.0      // セル間隔
-        static let kItemLength: CGFloat                 = 150.0     // セルサイズ
+        static let kMinimumInteritemSpacing: CGFloat    = 20.0      // セル間隔
+        static let kItemWidth: CGFloat                  = 120.0       // セル幅サイズ
+        static let kItemHeight: CGFloat                 = 250.0     // セル高さサイズ
         static let kFlickVelocityThreshold: CGFloat     = 0.2       //
     }
 
@@ -20,15 +21,15 @@ final class CustomCollectionViewFlowLayout: UICollectionViewFlowLayout {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        self.itemSize = CGSize(width: Settings.kItemLength, height: Settings.kItemLength)
+        self.itemSize = CGSize(width: Settings.kItemWidth, height: Settings.kItemHeight)
         self.minimumLineSpacing = CGFloat(Settings.kMinimumInteritemSpacing)
 
         // スクロール方向
         self.scrollDirection = .horizontal
 
         //
-        let horizontalInset = (UIScreen.main.bounds.width - Settings.kItemLength) / 2
-        let verticalInset   = (UIScreen.main.bounds.height - Settings.kItemLength) / 2
+        let horizontalInset = (UIScreen.main.bounds.width - Settings.kItemWidth) / 2
+        let verticalInset   = (UIScreen.main.bounds.height - Settings.kItemHeight) / 2
 
         self.sectionInset = UIEdgeInsets(top: verticalInset,
                                          left: horizontalInset,
@@ -77,6 +78,6 @@ final class CustomCollectionViewFlowLayout: UICollectionViewFlowLayout {
 
     /// ページ幅
     var pageWidth: CGFloat {
-        return itemSize.width / minimumLineSpacing
+        return itemSize.width + minimumLineSpacing
     }
 }
