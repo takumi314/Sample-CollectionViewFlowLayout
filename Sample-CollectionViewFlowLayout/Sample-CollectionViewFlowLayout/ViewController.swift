@@ -8,6 +8,9 @@
 
 import UIKit
 
+let numberOfSection = 1
+let numberOfCell    = 10
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -15,6 +18,38 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+}
+
+// MARK: - UICollectionViewDataSource
+extension ViewController: UICollectionViewDataSource {
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return numberOfSection
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return numberOfCell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let identifier = "cell"
+
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+
+        return cell
+    }
 
 }
 
+// MARK: - UICollectionViewDelegate
+extension ViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        // 選択したセルを中心に移動する
+        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+
+    }
+
+}
